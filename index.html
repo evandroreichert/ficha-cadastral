@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Ficha Cadastral - SN Internet</title>
 </head>
+
 <body>
 
     <header class="header">
@@ -42,32 +44,28 @@
             <img id="logo" src="/assets/dark-logo.png" alt="Logo">
         </a>
     </div>
-     
+
     <form id="cadastroForm">
         <h1>Ficha Cadastral CPF ⚡</h1>
 
         <!-- Tipo de Instalação -->
         <div class="form-row form-row-3">
             <div class="form-group">
-            <label for="tipo_instalacao">Tipo de Instalação</label>
-            <select id="tipo_instalacao" name="tipo_instalacao" required>
-                <option value="Instalação Fibra Aéreo">Instalação Fibra Aéreo</option>
-                <option value="Instalação FTTA">Instalação FTTA</option>
-            </select>
-        </div>
+                <label for="tipo_instalacao">Tipo de Instalação</label>
+                <select id="tipo_instalacao" name="tipo_instalacao" required>
+                    <option value="Instalação Fibra Aéreo">Instalação Fibra Aéreo</option>
+                    <option value="Instalação FTTA">Instalação FTTA</option>
+                </select>
+            </div>
             <div class="form-group">
                 <label for="cpf">CPF</label>
-                <input type="text" id="cpf" name="cpf" 
-                       pattern="^[0-9]{11}$" 
-                       title="Insira um CPF válido com 11 dígitos." 
-                       inputmode="numeric" required>
+                <input type="text" id="cpf" name="cpf" pattern="^[0-9]{11}$"
+                    title="Insira um CPF válido com 11 dígitos." inputmode="numeric" required>
             </div>
             <div class="form-group">
                 <label for="data_nascimento">Data de Nascimento</label>
-                <input type="text" id="data_nascimento" name="data_nascimento"
-                       placeholder="dd/mm/aaaa"
-                       maxlength="10"
-                       inputmode="numeric" required>
+                <input type="text" id="data_nascimento" name="data_nascimento" placeholder="dd/mm/aaaa" maxlength="10"
+                    inputmode="numeric" required>
             </div>
         </div>
 
@@ -91,32 +89,45 @@
 
         <!-- Como ficou sabendo -->
         <div class="form-group">
-            <label for="como_soube">Como você ficou sabendo da SN? <br><span class="placeholder">Em caso de indicação enviar nome completo</span></label>
-            <input type="text" id="como_soube" name="como_soube">
+            <label for="como_soube">Como você ficou sabendo da Seanet? <br><span class="placeholder">Obrigatório
+                    informar corretamente a origem da venda</span></label>
+            <select id="como_soube" name="como_soube" required>
+                <option value="">Selecione uma opção</option>
+                <option value="ANÚNCIO FACEBOOK">ANÚNCIO FACEBOOK</option>
+                <option value="ANÚNCIO INSTAGRAM">ANÚNCIO INSTAGRAM</option>
+                <option value="BNI">BNI</option>
+                <option value="EMAIL MARKETING">EMAIL MARKETING</option>
+                <option value="EVENTO SEANET">EVENTO SEANET</option>
+                <option value="GOOGLE ADS">GOOGLE ADS</option>
+                <option value="HOT SPOT SEANET">HOT SPOT SEANET</option>
+                <option value="INDICAÇÃO CLIENTE">INDICAÇÃO CLIENTE</option>
+                <option value="INDICAÇÃO FUNCIONÁRIO">INDICAÇÃO FUNCIONÁRIO</option>
+                <option value="SITE">SITE</option>
+                <option value="TEIAH">TEIAH</option>
+            </select>
         </div>
 
         <!-- CEP -->
-        
+
         <div class="form-row form-row-2">
 
-        <!-- Endereço e Referência -->
-        <div class="form-group">
-            <label for="endereco_completo">Endereço Completo da Instalação</label>
-            <input type="text" id="endereco_completo" name="endereco_completo" required>
-        </div>
+            <!-- Endereço e Referência -->
+            <div class="form-group">
+                <label for="endereco_completo">Endereço Completo da Instalação</label>
+                <input type="text" id="endereco_completo" name="endereco_completo" required>
+            </div>
 
-        <div class="form-group">
-            <label for="cep">CEP</label>
-            <input type="text" id="cep" name="cep" 
-                   pattern="^[0-9]{8}$" 
-                   title="Insira um CEP válido com 8 dígitos." 
-                   inputmode="numeric" required>
-        </div>
+            <div class="form-group">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" name="cep" pattern="^[0-9]{8}$" title="Insira um CEP válido com 8 dígitos."
+                    inputmode="numeric" required>
+            </div>
         </div>
 
         <div class="form-row form-row-2">
             <div class="form-group">
-                <label for="referencia_completa">Referência Completa <span class="placeholder">- Obrigatório</span></label>
+                <label for="referencia_completa">Referência Completa <span class="placeholder">-
+                        Obrigatório</span></label>
                 <input type="text" id="referencia_completa" name="referencia_completa" required>
             </div>
             <div class="form-group">
@@ -129,17 +140,13 @@
         <div class="form-row form-row-2">
             <div class="form-group">
                 <label for="telefone_principal">Telefone Principal</label>
-                <input type="text" id="telefone_principal" name="telefone_principal" 
-                       pattern="^[0-9]{10,11}$" 
-                       title="Insira um número de telefone válido com 10 ou 11 dígitos." 
-                       inputmode="numeric" required>
+                <input type="text" id="telefone_principal" name="telefone_principal" pattern="^[0-9]{10,11}$"
+                    title="Insira um número de telefone válido com 10 ou 11 dígitos." inputmode="numeric" required>
             </div>
             <div class="form-group">
                 <label for="telefone_recado">Telefone para Recado<span class="placeholder"> - Obrigatório</span></label>
-                <input type="text" id="telefone_recado" name="telefone_recado" 
-                       pattern="^[0-9]{10,11}$" 
-                       title="Insira um número de telefone válido com 10 ou 11 dígitos." 
-                       inputmode="numeric" required>
+                <input type="text" id="telefone_recado" name="telefone_recado" pattern="^[0-9]{10,11}$"
+                    title="Insira um número de telefone válido com 10 ou 11 dígitos." inputmode="numeric" required>
             </div>
         </div>
 
@@ -162,21 +169,21 @@
         </div>
 
         <div class="form-row form-row-2">
-        <!-- Taxa de instalação e forma de pagamento -->
-        <div class="form-group">
-            <label for="taxa_instalacao">Taxa de Instalação e Forma de Pagamento</label>
-            <input type="text" id="taxa_instalacao" name="taxa_instalacao">
-        </div>
+            <!-- Taxa de instalação e forma de pagamento -->
+            <div class="form-group">
+                <label for="taxa_instalacao">Taxa de Instalação e Forma de Pagamento</label>
+                <input type="text" id="taxa_instalacao" name="taxa_instalacao">
+            </div>
 
-        <!-- Forma de Pagamento Mensalidade -->
-        <div class="form-group">
-            <label for="forma_pagto">Forma de Pagamento da Mensalidade</label>
-            <select id="forma_pagto" name="forma_pagto" required>
-                <option value="BOLETO">BOLETO</option>
-                <option value="CARTAO DE CREDITO RECORRENTE">CARTÃO DE CRÉDITO RECORRENTE</option>
-            </select>
+            <!-- Forma de Pagamento Mensalidade -->
+            <div class="form-group">
+                <label for="forma_pagto">Forma de Pagamento da Mensalidade</label>
+                <select id="forma_pagto" name="forma_pagto" required>
+                    <option value="BOLETO">BOLETO</option>
+                    <option value="CARTAO DE CREDITO RECORRENTE">CARTÃO DE CRÉDITO RECORRENTE</option>
+                </select>
+            </div>
         </div>
-       </div>
 
         <!-- Quem vai acompanhar a instalação -->
         <h3>Quem vai acompanhar a instalação:</h3>
@@ -187,10 +194,8 @@
             </div>
             <div class="form-group">
                 <label for="acompanhante_telefone">Telefone</label>
-                <input type="text" id="acompanhante_telefone" name="acompanhante_telefone" 
-                       pattern="^[0-9]{10,11}$" 
-                       title="Insira um número de telefone válido com 10 ou 11 dígitos." 
-                       inputmode="numeric">
+                <input type="text" id="acompanhante_telefone" name="acompanhante_telefone" pattern="^[0-9]{10,11}$"
+                    title="Insira um número de telefone válido com 10 ou 11 dígitos." inputmode="numeric">
             </div>
         </div>
 
@@ -223,4 +228,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
