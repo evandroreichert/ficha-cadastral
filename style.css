@@ -120,6 +120,63 @@ form {
   padding: 10px 20px;
 }
 
+/* Seletor CPF / CNPJ */
+.tipo-ficha-switch {
+  display: flex;
+  gap: 6px;
+  background: var(--color-section-bg-dark);
+  border: 1px solid var(--color-section-border-dark);
+  border-radius: var(--border-radius-lg);
+  padding: 6px;
+  margin: 0 auto 16px;
+  max-width: 320px;
+}
+
+.tipo-ficha-btn {
+  flex: 1;
+  padding: 10px 16px;
+  background: transparent;
+  color: var(--color-text-dark);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.15s;
+}
+
+.tipo-ficha-btn:hover {
+  background-color: rgba(74, 158, 255, 0.1);
+  transform: none;
+  box-shadow: none;
+}
+
+.tipo-ficha-btn.active {
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(13, 71, 161, 0.3);
+}
+
+.light-mode .tipo-ficha-switch {
+  background: var(--color-section-bg-light);
+  border-color: var(--color-section-border-light);
+}
+
+.light-mode .tipo-ficha-btn {
+  color: var(--color-text-light);
+}
+
+.light-mode .tipo-ficha-btn:hover {
+  background-color: rgba(0, 36, 145, 0.08);
+}
+
+.light-mode .tipo-ficha-btn.active {
+  background-color: var(--color-primary-light);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 36, 145, 0.25);
+}
+
 /* Seções do formulário */
 .form-section {
   background: var(--color-section-bg-dark);

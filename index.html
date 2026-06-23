@@ -35,7 +35,13 @@
     </div>
 
     <form id="cadastroForm">
-        <h1>Ficha Cadastral CPF</h1>
+        <h1 id="formTitulo">Ficha Cadastral CPF</h1>
+
+        <!-- Seletor de Tipo de Ficha -->
+        <div class="tipo-ficha-switch" role="tablist" aria-label="Tipo de Ficha">
+            <button type="button" class="tipo-ficha-btn active" data-tipo="cpf" role="tab" aria-selected="true">CPF</button>
+            <button type="button" class="tipo-ficha-btn" data-tipo="cnpj" role="tab" aria-selected="false">CNPJ</button>
+        </div>
 
         <!-- Origem e Atendimento -->
         <div class="form-section">
@@ -72,8 +78,8 @@
             </div>
         </div>
 
-        <!-- Dados Pessoais -->
-        <div class="form-section">
+        <!-- Dados Pessoais (CPF) -->
+        <div class="form-section" data-tipo="cpf">
             <div class="form-section-title">Dados Pessoais</div>
             <div class="form-row form-row-2">
                 <div class="form-group">
@@ -100,6 +106,51 @@
             <div class="form-group">
                 <label for="email">Email <span class="required">*</span></label>
                 <input type="email" id="email" name="email" required>
+            </div>
+        </div>
+
+        <!-- Dados da Empresa (CNPJ) -->
+        <div class="form-section" data-tipo="cnpj" style="display: none;">
+            <div class="form-section-title">Dados da Empresa</div>
+            <div class="form-row form-row-2">
+                <div class="form-group">
+                    <label for="cnpj">CNPJ <span class="required">*</span></label>
+                    <input type="text" id="cnpj" name="cnpj" pattern="^[0-9]{14}$"
+                        title="Insira um CNPJ válido com 14 dígitos." inputmode="numeric">
+                </div>
+                <div class="form-group">
+                    <label for="ie">IE (Inscrição Estadual) <span class="required">*</span></label>
+                    <input type="text" id="ie" name="ie">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nome_social">Nome Social <span class="required">*</span></label>
+                <input type="text" id="nome_social" name="nome_social">
+            </div>
+            <div class="form-group">
+                <label for="email_cnpj">Email <span class="required">*</span></label>
+                <input type="email" id="email_cnpj" name="email_cnpj">
+            </div>
+        </div>
+
+        <!-- Dados de quem assina pela empresa (CNPJ) -->
+        <div class="form-section" data-tipo="cnpj" style="display: none;">
+            <div class="form-section-title">Dados de quem assina pela empresa</div>
+            <div class="form-row form-row-2">
+                <div class="form-group">
+                    <label for="signatario_cpf">CPF <span class="required">*</span></label>
+                    <input type="text" id="signatario_cpf" name="signatario_cpf" pattern="^[0-9]{11}$"
+                        title="Insira um CPF válido com 11 dígitos." inputmode="numeric">
+                </div>
+                <div class="form-group">
+                    <label for="signatario_data_nascimento">Data de Nascimento <span class="required">*</span></label>
+                    <input type="text" id="signatario_data_nascimento" name="signatario_data_nascimento"
+                        placeholder="dd/mm/aaaa" maxlength="10" inputmode="numeric">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="signatario_nome">Nome <span class="required">*</span></label>
+                <input type="text" id="signatario_nome" name="signatario_nome">
             </div>
         </div>
 
