@@ -4,66 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../../assets/favicon.png">
-    <title>Galeria de Imagens</title>
+    <title>Planos — Seanet</title>
     <link rel="stylesheet" href="../planos/planos.css">
+    <script>
+        (function() {
+            try {
+                if (localStorage.getItem('theme') === 'light') {
+                    document.documentElement.classList.add('light-mode');
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-        <a href="../../index.html">
-            <img id="logo" src="../../assets/dark-logo.png" alt="Logo">
+    <header class="site-header">
+        <a class="logo" href="../../index.html" aria-label="Seanet">
+            <img id="logo" src="../../assets/dark-logo.png" alt="Seanet">
         </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Início</a></li>
-                <li><a href="../documentos/documentos.html">Documentos</a></li>
-            </ul>
+        <nav class="site-nav">
+            <a href="../../index.html">Início</a>
+            <a href="../documentos/documentos.html">Documentos</a>
         </nav>
     </header>
 
-    <h3 class="sub-title">Planos Residenciais</h3>
+    <main class="page">
 
-    <div class="galeria">
-        <div class="imagem">
-            <img src="../../assets/planos/Sea One.jpg" alt="Imagem 1">
-            <h3>Sea One | 129,90</h3>
-            <a href="../../assets/planos/Sea One.jpg" download class="botao-download">Baixar</a>
-        </div>
-        <div class="imagem">
-            <img src="../../assets/planos/Sea Prime.jpg" alt="Imagem 1">
-            <h3>Sea Prime | 169,90</h3>
-            <a href="../../assets/planos/Sea Prime.jpg" download class="botao-download">Baixar</a>
-        </div>
-        <div class="imagem">
-            <img src="../../assets/planos/Sea Black.jpg" alt="Imagem 1">
-            <h3>Sea Black | 249,90</h3>
-            <a href="../../assets/planos/Sea Black.jpg" download class="botao-download">Baixar</a>
-        </div>
-    </div>
+        <section class="section">
+            <h2 class="section-title">Planos Residenciais</h2>
 
-    <div class="galeria">
-        
-    </div>
+            <div class="grid">
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/planos/Sea One.jpg" alt="Plano Sea One">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Sea One</h3>
+                        <span class="card-price">R$ 129,90 / mês</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/planos/Sea One.jpg" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
 
-    <!-- <h3 class="sub-title">Planos Empresariais</h3>
-    <div class="galeria">
-        <div class="imagem">
-            <img src="../../assets/planos/Combo empresarial.png" alt="Imagem 6">
-            <h3>Combo Empresarial 700mb + IP Válido</h3>
-            <a href="../../assets/planos/Combo empresarial.png" download class="botao-download">Baixar</a>
-        </div>
-    </div> -->
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/planos/Sea Prime.jpg" alt="Plano Sea Prime">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Sea Prime</h3>
+                        <span class="card-price">R$ 169,90 / mês</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/planos/Sea Prime.jpg" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
 
-    <h3 class="sub-title">Outros</h3>
-    <div class="galeria">
-        <div class="imagem roku">
-            <img src="../../assets/planos/roku.png" alt="Imagem 6">
-            <h3>Roku TV</h3>
-            <a href="../../assets/planos/roku.png" download class="botao-download">Baixar</a>
-        </div>
-    </div>
-    
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/planos/Sea Black.jpg" alt="Plano Sea Black">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Sea Black</h3>
+                        <span class="card-price">R$ 249,90 / mês</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/planos/Sea Black.jpg" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Adicionais</h2>
+
+            <div class="grid">
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/planos/roku.png" alt="Roku TV">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Roku TV</h3>
+                        <span class="card-price">Streaming</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/planos/roku.png" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
 </body>
 </html>

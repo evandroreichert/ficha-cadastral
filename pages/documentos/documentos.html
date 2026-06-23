@@ -4,94 +4,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../../assets/favicon.png">
-    <title>Galeria de Imagens</title>
+    <title>Documentos — Seanet</title>
     <link rel="stylesheet" href="../documentos/documentos.css">
+    <script>
+        (function() {
+            try {
+                if (localStorage.getItem('theme') === 'light') {
+                    document.documentElement.classList.add('light-mode');
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-        <a href="../../index.html">
-            <img id="logo" src="../../assets/dark-logo.png" alt="Logo">
+    <header class="site-header">
+        <a class="logo" href="../../index.html" aria-label="Seanet">
+            <img id="logo" src="../../assets/dark-logo.png" alt="Seanet">
         </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Início</a></li>
-                <li><a href="../planos/planos.html">Planos</a></li>
-            </ul>
+        <nav class="site-nav">
+            <a href="../../index.html">Início</a>
+            <a href="../planos/planos.html">Planos</a>
         </nav>
     </header>
 
-    <h3 class="sub-title">Documentos</h3>
+    <main class="page">
 
-    <div class="galeria">
-        <div class="imagem">
-            <img src="../../assets/documentos/Cadastro CPF.png" alt="Imagem 3">
-            <h3>Ficha de Cadastro CPF</h3>
-            <a href="../../assets/documentos/Cadastro CPF.png" download class="botao-download">Baixar</a>
-        </div>
-        <div class="imagem">
-            <img src="../../assets/documentos/Cadastro CNPJ.png" alt="Imagem 3">
-            <h3>Ficha de Cadastro CNPJ</h3>
-            <a href="../../assets/documentos/Cadastro CNPJ.png" download class="botao-download">Baixar</a>
-        </div>
-        <div class="imagem">
-            <img src="../../assets/documentos/Informações para Cadastro.jpeg" alt="Imagem 3">
-            <h3>Informações para Cadastro</h3>
-            <a href="../../assets/documentos/Informações para Cadastro.jpeg" download class="botao-download">Baixar</a>
-        </div>
-        <div class="imagem">
-            <img src="../../assets/documentos/Documentos para Novo cadastro.jpeg" alt="Imagem 1">
-            <h3>Documentos para Novo Cadastro</h3>
-            <a href="../../assets/documentos/Documentos para Novo cadastro.jpeg" download class="botao-download">Baixar</a>
-        </div>
-        <div class="imagem">
-            <img src="../../assets/documentos/Documentos para Novo cadastro CNPJ.jpeg" alt="Imagem 2">
-            <h3>Documentos para Novo Cadastro CNPJ</h3>
-            <a href="../../assets/documentos/Documentos para Novo cadastro CNPJ.jpeg" download class="botao-download">Baixar</a>
-        </div>
-        
-        <div class="imagem">
-            <img src="../../assets/documentos/Documentos para Troca de Titularidade.png" alt="Imagem 5">
-            <h3>Documentos para Troca de Titularidade</h3>
-            <a href="../../assets/documentos/Documentos para Troca de Titularidade.png" download class="botao-download">Baixar</a>
-        </div>
-        <div class="imagem">
-            <img src="../../assets/documentos/Documentos para Troca de Titularidade CNPJ.png" alt="Imagem 6">
-            <h3>Documentos para Troca de Titularidade CNPJ</h3>
-            <a href="../../assets/documentos/Documentos para Troca de Titularidade CNPJ.png" download class="botao-download">Baixar</a>
-        </div>
-        <div class="imagem">
-            <img src="../../assets/documentos/Mudança de endereço.png" alt="Imagem 6">
-            <h3>Documentos para Mudança de endereço</h3>
-            <a href="../../assets/documentos/Mudança de endereço.png" download class="botao-download">Baixar</a>
-        </div>
-        <div class="imagem">
-            <img src="../../assets/documentos/Troca de Vencimento.png" alt="Imagem 6">
-            <h3>Documentos para Troca de Vencimento</h3>
-            <a href="../../assets/documentos/Troca de Vencimento.png" download class="botao-download">Baixar</a>
-        </div>
-        <div class="imagem">
-            <img src="../../assets/documentos/Troca de plano.png" alt="Imagem 6">
-            <h3>Documentos para Troca de Plano</h3>
-            <a href="../../assets/documentos/Troca de plano.png" download class="botao-download">Baixar</a>
-        </div>
-    </div>
+        <section class="section">
+            <h2 class="section-title">Documentos</h2>
 
-    <h3 class="sub-title">Úteis</h3>
+            <div class="grid">
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/documentos/Cadastro CPF.png" alt="Ficha de Cadastro CPF">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Ficha de Cadastro</h3>
+                        <span class="card-tag">CPF</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/documentos/Cadastro CPF.png" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
 
-    <div class="galeria">
-        <div class="imagem">
-            <img src="../../assets/uteis/indique-ganhe.jpeg" alt="Imagem 2">
-            <h3>Indique e Ganhe</h3>
-            <a href="../../assets/uteis/indique-ganhe.jpeg" download class="botao-download">Baixar</a>
-        </div>
-        <div class="imagem">
-            <img src="../../assets/uteis/valores servicos.png" alt="Imagem 2">
-            <h3>Valores Equipamentos e Serviços</h3>
-            <a href="../../assets/uteis/valores servicos.png" download class="botao-download">Baixar</a>
-        </div>
-    </div>
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/documentos/Cadastro CNPJ.png" alt="Ficha de Cadastro CNPJ">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Ficha de Cadastro</h3>
+                        <span class="card-tag">CNPJ</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/documentos/Cadastro CNPJ.png" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/documentos/Informações para Cadastro.jpeg" alt="Informações para Cadastro">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Informações para Cadastro</h3>
+                        <span class="card-tag">Referência</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/documentos/Informações para Cadastro.jpeg" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/documentos/Documentos para Novo cadastro.jpeg" alt="Documentos para Novo Cadastro CPF">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Novo Cadastro</h3>
+                        <span class="card-tag">CPF</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/documentos/Documentos para Novo cadastro.jpeg" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/documentos/Documentos para Novo cadastro CNPJ.jpeg" alt="Documentos para Novo Cadastro CNPJ">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Novo Cadastro</h3>
+                        <span class="card-tag">CNPJ</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/documentos/Documentos para Novo cadastro CNPJ.jpeg" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/documentos/Documentos para Troca de Titularidade.png" alt="Troca de Titularidade CPF">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Troca de Titularidade</h3>
+                        <span class="card-tag">CPF</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/documentos/Documentos para Troca de Titularidade.png" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/documentos/Documentos para Troca de Titularidade CNPJ.png" alt="Troca de Titularidade CNPJ">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Troca de Titularidade</h3>
+                        <span class="card-tag">CNPJ</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/documentos/Documentos para Troca de Titularidade CNPJ.png" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/documentos/Mudança de endereço.png" alt="Mudança de Endereço">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Mudança de Endereço</h3>
+                        <span class="card-tag">Solicitação</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/documentos/Mudança de endereço.png" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/documentos/Troca de Vencimento.png" alt="Troca de Vencimento">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Troca de Vencimento</h3>
+                        <span class="card-tag">Mensalidade</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/documentos/Troca de Vencimento.png" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/documentos/Troca de plano.png" alt="Troca de Plano">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Troca de Plano</h3>
+                        <span class="card-tag">Plano</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/documentos/Troca de plano.png" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Úteis</h2>
+
+            <div class="grid">
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/uteis/indique-ganhe.jpeg" alt="Indique e Ganhe">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Indique e Ganhe</h3>
+                        <span class="card-tag">Benefício</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/uteis/indique-ganhe.jpeg" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="../../assets/uteis/valores servicos.png" alt="Valores Equipamentos e Serviços">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Equipamentos e Serviços</h3>
+                        <span class="card-tag">Tabela</span>
+                    </div>
+                    <a class="card-btn" href="../../assets/uteis/valores servicos.png" download>
+                        <span class="card-btn-icon" aria-hidden="true">↓</span>
+                        <span>Baixar</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
 </body>
 </html>
